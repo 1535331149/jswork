@@ -23,8 +23,8 @@ document.getElementById('table2').innerHTML = str
 str = '<table border="1">'
 for (let c = 9; c > 0; --c) {
     str += '<tr>'
-    for (var v = 1; v <= c; ++v) {
-        str += '<td>' + c + '*' + v + '=' + (c * v) + '</td>'
+    for (var v = c; v > 0; --v) {
+        str += '<td>' + v + '*' + c + '=' + (v * c) + '</td>'
     }
     str += '</tr>'
 }
