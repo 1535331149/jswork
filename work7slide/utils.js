@@ -32,12 +32,17 @@ function showLog(logValues, showElement) {
 }
 function insertSort(str) {
     let arr = str.split(',')
+    let sortLog = []
     for (let i = 1; i < arr.length; i++) {
         for (let j = i; j > 0; j--) {
+            sortLog.push([arr.concat(), [j, j - 1]])
+            sortLog.push([arr.concat(), [j, j - 1]])
+            sortLog.push([arr.concat(), [j, j - 1]])
             if (arr[j - 1] > arr[j]) {
                 [arr[j - 1], arr[j]] = [arr[j], arr[j - 1]]
             }
         }
     }
-    return arr
+    sortLog.push([arr.concat(), [-1, -1]])
+    return sortLog
 }
