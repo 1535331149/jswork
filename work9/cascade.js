@@ -91,12 +91,3 @@ majors.onchange = function(){
     classes.options.length = 0;
     createOption(classes,classesArr[colleges.value][majors.value]);
 };
-colleges.onchange = function(){
-    majors.options.length = 0;
-    createOption(majors,majors[colleges.value]);
-    if(colleges.value>=0){
-        majors.onchange();
-    }else{
-        classes.options.length = 0;
-    }
-};
