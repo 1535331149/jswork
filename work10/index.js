@@ -23,16 +23,15 @@ function monkey(){
 }
 function stat(){
     let str = document.getElementById("str").value
-    let obj = {}
-    var juzi="qaeweezserasrweewa"
-    var zifu=juzi.split("")
-    zifu.sort();
-    document.getElementById("result").innerHTML = zifu
-    for(var x =0;x<=zifu.length;x++){
-        if(zifu.indexOf(zifu[0]!=-1)
-        ); 
+    let obj = {};
+    var juzi = str.split("");
+    juzi = juzi.sort();
+    for(var i=0;i<str.length;i++){
+        var zifu=juzi[i];
+        obj[zifu]=(obj [zifu]+1)||1;
     }
-    
+    document.getElementById("result").innerText = JSON.stringify(obj)
+
 }
 
 
